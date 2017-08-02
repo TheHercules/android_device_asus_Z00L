@@ -30,3 +30,8 @@ TARGET_SCREEN_WIDTH := 720
 
 # Inherit from msm8916-common
 $(call inherit-product, device/asus/msm8916-common/msm8916.mk)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.ota.romname=AIM-ROM \
+        ro.ota.version=$(shell date +"%Y%m%d") \
+        ro.ota.manifest=https://raw.githubusercontent.com/AIMROM/OFFICIAL_DEVICES/N/Z00L.xml
